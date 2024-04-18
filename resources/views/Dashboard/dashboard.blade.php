@@ -9,6 +9,7 @@
     <meta name="author" content="potenzaglobalsolutions.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     @include('Dashboard.layouts.head')
+    <title> {{__("main.Dashboard")}} </title>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
             </div>
             <!-- widgets -->
             <div class="row">
-                <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+                <div class="col-xl-2 col-lg-6 col-md-6 mb-30">
                     <div class="card card-statistics h-100">
                         <div class="card-body">
                             <div class="clearfix">
@@ -57,17 +58,17 @@
                                 </div>
                                 <div class="float-right text-right">
                                     <p class="card-text text-dark"> {{ __("main.Sliders") }} </p>
-                                    <h4>65,650</h4>
+                                    <h4>{{ \App\Models\Sliders::count() }}</h4>
                                 </div>
                             </div>
-                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
+                            {{-- <p class="text-muted pt-3 mb-0 mt-2 border-top">
                                 <i class="fa fa-exclamation-circle mr-1" aria-hidden="true"></i> 81% lower
                                 growth
-                            </p>
+                            </p> --}}
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+                <div class="col-xl-2 col-lg-6 col-md-6 mb-30">
                     <div class="card card-statistics h-100">
                         <div class="card-body">
                             <div class="clearfix">
@@ -78,16 +79,16 @@
                                 </div>
                                 <div class="float-right text-right">
                                     <p class="card-text text-dark"> {{__("main.Services")}} </p>
-                                    <h4>656</h4>
+                                    <h4>{{ \App\Models\Services::count() }}</h4>
                                 </div>
                             </div>
-                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
+                            {{-- <p class="text-muted pt-3 mb-0 mt-2 border-top">
                                 <i class="fa fa-bookmark-o mr-1" aria-hidden="true"></i> Total sales
-                            </p>
+                            </p> --}}
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+                <div class="col-xl-2 col-lg-6 col-md-6 mb-30">
                     <div class="card card-statistics h-100">
                         <div class="card-body">
                             <div class="clearfix">
@@ -98,16 +99,16 @@
                                 </div>
                                 <div class="float-right text-right">
                                     <p class="card-text text-dark">{{__("main.Users")}}</p>
-                                    <h4>$65656</h4>
+                                    <h4> {{\App\Models\User::count()}} </h4>
                                 </div>
                             </div>
-                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
+                            {{-- <p class="text-muted pt-3 mb-0 mt-2 border-top">
                                 <i class="fa fa-calendar mr-1" aria-hidden="true"></i> Sales Per Week
-                            </p>
+                            </p> --}}
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+                <div class="col-xl-2 col-lg-6 col-md-6 mb-30">
                     <div class="card card-statistics h-100">
                         <div class="card-body">
                             <div class="clearfix">
@@ -118,12 +119,54 @@
                                 </div>
                                 <div class="float-right text-right">
                                     <p class="card-text text-dark">{{__("main.Review")}}</p>
-                                    <h4>62,500+</h4>
+                                    <h4> {{\App\Models\Review::count()}} </h4>
                                 </div>
                             </div>
-                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
+                            {{-- <p class="text-muted pt-3 mb-0 mt-2 border-top">
                                 <i class="fa fa-repeat mr-1" aria-hidden="true"></i> Just Updated
-                            </p>
+                            </p> --}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-6 col-md-6 mb-30">
+                    <div class="card card-statistics h-100">
+                        <div class="card-body">
+                            <div class="clearfix">
+                                <div class="float-left">
+                                    <span class="text-primary">
+                                        <i class="fa fa-twitter highlight-icon" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                <div class="float-right text-right">
+                                    <p class="card-text text-dark">{{__("main.Company_advantages")}}</p>
+                                    <h4> {{\App\Models\CompanyAdvantages::count()}} </h4>
+                                </div>
+                            </div>
+                            {{-- <p class="text-muted pt-3 mb-0 mt-2 border-top">
+                                <i class="fa fa-repeat mr-1" aria-hidden="true"></i> Just Updated
+                            </p> --}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-6 col-md-6 mb-30">
+                    <div class="card card-statistics h-100">
+                        <div class="card-body">
+                            <div class="clearfix">
+                                <div class="float-left">
+                                    <span class="text-primary">
+                                        <i class="fa fa-twitter highlight-icon" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                <div class="float-right text-right">
+                                    <p class="card-text text-dark">{{__("main.Blog")}}</p>
+                                    <h4> {{\App\Models\Blog::count()}} </h4>
+                                </div>
+                            </div>
+                            {{-- <p class="text-muted pt-3 mb-0 mt-2 border-top">
+                                <i class="fa fa-repeat mr-1" aria-hidden="true"></i> Just Updated
+                            </p> --}}
                         </div>
                     </div>
                 </div>

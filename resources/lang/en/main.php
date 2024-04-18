@@ -16,4 +16,9 @@
         "Add_Slide" => "Add Slide" , 
         "Submit" => "Submit" , 
         "Close" => "Close" , 
+        "Blog" => "Blog" , 
+        "Add_Arabic_title_slider" => "Title Slider (Arabic)" , 
+        "Add_English_title_slider" => "Title Slider (English)" , 
+        "Add_Arabic_desc_slider" => "Description Slider (Arabic)" , 
+        "Add_English_desc_slider" => "Description Slider (English)" , 
     ] ; 

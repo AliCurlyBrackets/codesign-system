@@ -9,7 +9,8 @@
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "mcamara/laravel-localization": "^2.0",
-        "spatie/laravel-translatable": "^6.6"
+        "spatie/laravel-translatable": "^6.6",
+        "yoeunes/toastr": "^2.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

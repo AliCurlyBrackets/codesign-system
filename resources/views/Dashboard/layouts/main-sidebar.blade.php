@@ -17,7 +17,7 @@
                         </ul>
                     </li>
                     <!-- menu title -->
-                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Components </li>
+                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title"> </li>
                     <!-- menu item Elements-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#elements">
@@ -27,7 +27,7 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="elements" class="collapse" data-parent="#sidebarnav">
-                            <li><a href="{{route("Sliders")}}"> {{ __("main.Show_All") }} </a></li>
+                            <li><a href="{{route("Sliders.index")}}"> {{ __("main.Show_All") }} </a></li>
                         </ul>
                     </li>
                     <!-- menu item calendar-->
@@ -56,6 +56,20 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="chart" class="collapse" data-parent="#sidebarnav">
+                            <li> <a href="chart-js.html"> {{__("main.Show_All")}} </a> </li>
+                        </ul>
+                    </li>
+
+
+
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#Blog">
+                            <div class="pull-left"><i class="ti-pie-chart"></i><span
+                                    class="right-nav-text"> {{__("main.Blog")}} </span></div>
+                            <div class="pull-right"><i class="ti-plus"></i></div>
+                            <div class="clearfix"></div>
+                        </a>
+                        <ul id="Blog" class="collapse" data-parent="#sidebarnav">
                             <li> <a href="chart-js.html"> {{__("main.Show_All")}} </a> </li>
                         </ul>
                     </li>

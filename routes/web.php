@@ -23,7 +23,7 @@ Route::group(
 
         // Route Admin Pages
         Route::group(['prefix' => "admin"] , function(){
-              Route::get("/Sliders" , [SlidersController::class , "index"])->name("Sliders");   
+              Route::resource("/Sliders" , SlidersController::class);   
         }) ; 
         
         Route::middleware('auth')->group(function () {

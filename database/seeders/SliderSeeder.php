@@ -15,21 +15,21 @@ class SliderSeeder extends Seeder
     {
         $Sliders = array(
             array(
-                "filename" => "assets/images/Slider/Slide1.png" , 
+                "filename" => "Slide1.png" , 
                 "title" =>"" , 
                 "desc" => "" , 
                 "created_at" => now() ,
                 "updated_at" => now() , 
                 ) ,
             array(
-                "filename" => "assets/images/Slider/Slide2.png" , 
+                "filename" => "Slide2.png" , 
                 "title" =>"" , 
                 "desc" => "" ,
                 "created_at" => now() ,
                 "updated_at" => now() , 
                 ) ,
             array(
-                "filename" => "assets/images/Slider/Slide3.png" , 
+                "filename" => "Slide3.png" , 
                 "title" =>"" , 
                 "desc" => "" , 
                 "created_at" => now() ,

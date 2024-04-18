@@ -2,27 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Sliders;
+use App\Models\Blog;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\SliderValidation;
-use App\Repositry\Sliders\SliderRepo;
 use Illuminate\Http\Request;
 
-class SlidersController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-
-     private $SliderRepo ; 
-
-     public function __construct(SliderRepo $repo) 
-     {
-        $this->SliderRepo  = $repo ; 
-     }
     public function index()
     {
-      return $this->SliderRepo->index() ; 
+        //
     }
 
     /**
@@ -36,15 +27,15 @@ class SlidersController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(SliderValidation $request)
+    public function store(Request $request)
     {
-      return $this->SliderRepo->store($request) ; 
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Sliders $sliders)
+    public function show(Blog $blog)
     {
         //
     }
@@ -52,7 +43,7 @@ class SlidersController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Sliders $sliders)
+    public function edit(Blog $blog)
     {
         //
     }
@@ -60,7 +51,7 @@ class SlidersController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Sliders $sliders)
+    public function update(Request $request, Blog $blog)
     {
         //
     }
@@ -68,7 +59,7 @@ class SlidersController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Sliders $sliders)
+    public function destroy(Blog $blog)
     {
         //
     }

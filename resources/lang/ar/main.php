@@ -17,4 +17,9 @@
         "Add_Slide" => "اضافه صوره متحركه" , 
         "Submit" => "ارسال" , 
         "Close" => "اغلاق" , 
+        "Blog" => "المدونه" , 
+        "Add_Arabic_title_slider" => "اضافه عنوان (عربي)" , 
+        "Add_English_title_slider" => "اضافه عنوان (انجليزي)" , 
+        "Add_Arabic_desc_slider" => "اضافه وصف (عربي)" , 
+        "Add_English_desc_slider" => "اضافه وصف (انجليزي)" , 
     ] ; 
