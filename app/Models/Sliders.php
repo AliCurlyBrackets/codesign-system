@@ -9,9 +9,9 @@ use Spatie\Translatable\HasTranslations;
 class Sliders extends Model
 {
     use HasFactory;
-    use HasTranslations ;  
+    use HasTranslations ;
 
-    protected $translatable = ["title" , "desc"] ; 
+    protected $translatable = ["title" , "desc"] ;
 
-    protected $fillable = ["filename" , "title" , "desc"] ; 
+    protected $fillable = ["filename" , "title" , "desc" , "status"] ;
 }

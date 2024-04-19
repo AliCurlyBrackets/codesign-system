@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->string("filename") ; 
-            $table->string("serv_title")->nullable() ; 
-            $table->string("serv_desc")->nullable() ; 
+            $table->string("filename") ;
+            $table->string("serv_title")->nullable() ;
+            $table->string("serv_desc")->nullable() ;
+            $table->string("status")->default(1) ;
             $table->timestamps();
         });
     }

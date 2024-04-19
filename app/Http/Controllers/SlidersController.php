@@ -14,15 +14,15 @@ class SlidersController extends Controller
      * Display a listing of the resource.
      */
 
-     private $SliderRepo ; 
+     private $SliderRepo ;
 
-     public function __construct(SliderRepo $repo) 
+     public function __construct(SliderRepo $repo)
      {
-        $this->SliderRepo  = $repo ; 
+        $this->SliderRepo  = $repo ;
      }
     public function index()
     {
-      return $this->SliderRepo->index() ; 
+      return $this->SliderRepo->index() ;
     }
 
     /**
@@ -38,7 +38,7 @@ class SlidersController extends Controller
      */
     public function store(SliderValidation $request)
     {
-      return $this->SliderRepo->store($request) ; 
+      return $this->SliderRepo->store($request) ;
     }
 
     /**
@@ -60,16 +60,16 @@ class SlidersController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Sliders $sliders)
+    public function update(Request $request)
     {
-        //
+        return $this->SliderRepo->update($request) ;
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Sliders $sliders)
+    public function destroy(Request $request)
     {
-        //
+        return $this->SliderRepo->destroy($request) ;
     }
 }

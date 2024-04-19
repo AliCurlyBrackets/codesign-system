@@ -39,9 +39,12 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="calendar-menu" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="calendar.html"> {{ __("main.Show_All") }}  </a> </li>
+                            <li> <a href="{{ route('Services.index') }}"> {{ __("main.Show_All") }}  </a> </li>
                         </ul>
                     </li>
+
+
+
                     <!-- menu item todo-->
                     {{-- <li>
                         <a href="todo-list.html"><i class="ti-menu-alt"></i><span class="right-nav-text">Todo
@@ -71,6 +74,31 @@
                         </a>
                         <ul id="Blog" class="collapse" data-parent="#sidebarnav">
                             <li> <a href="chart-js.html"> {{__("main.Show_All")}} </a> </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#Permission">
+                            <div class="pull-left"><i class="ti-pie-chart"></i><span
+                                    class="right-nav-text"> {{__("main.PermissonAndRoles")}} </span></div>
+                            <div class="pull-right"><i class="ti-plus"></i></div>
+                            <div class="clearfix"></div>
+                        </a>
+                        <ul id="Permission" class="collapse" data-parent="#sidebarnav">
+                            <li> <a href="chart-js.html"> {{__("main.Show_All")}} </a> </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#Settings">
+                            <div class="pull-left"><i class="ti-calendar"></i><span
+                                    class="right-nav-text"> {{ __("main.Settings") }} </span></div>
+                            <div class="pull-right"><i class="ti-plus"></i></div>
+                            <div class="clearfix"></div>
+                        </a>
+                        <ul id="Settings" class="collapse" data-parent="#sidebarnav">
+                            <li> <a href="{{ route('Services.index') }}"> {{ __("main.Show_All") }}  </a> </li>
                         </ul>
                     </li>
 

@@ -9,9 +9,9 @@ use Spatie\Translatable\HasTranslations;
 class Services extends Model
 {
     use HasFactory;
-    use HasTranslations ; 
+    use HasTranslations ;
 
-    protected $translatable = ["serv_tite" , "serv_desc"] ; 
+    protected $translatable = ["serv_title" , "serv_desc"] ;
 
-    protected $fillable = ["filename" , "serv_title" , "serv_desc"] ; 
+    protected $fillable = ["filename" , "serv_title" , "serv_desc" , "status"] ;
 }

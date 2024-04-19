@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\SlidersController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -13,7 +14,7 @@ Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
-    ], function(){ 
+    ], function(){
 
 
         Route::get('/dashboard', function () {
@@ -23,19 +24,20 @@ Route::group(
 
         // Route Admin Pages
         Route::group(['prefix' => "admin"] , function(){
-              Route::resource("/Sliders" , SlidersController::class);   
-        }) ; 
-        
+              Route::resource("/Sliders" , SlidersController::class) ;
+              Route::resource('/Services' , ServicesController::class) ;
+        }) ;
+
         Route::middleware('auth')->group(function () {
             Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
             Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
             Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
         });
-        
+
         require __DIR__.'/auth.php';
 
 
     });
-    
+
 
 

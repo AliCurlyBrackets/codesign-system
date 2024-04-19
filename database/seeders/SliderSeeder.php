@@ -15,28 +15,31 @@ class SliderSeeder extends Seeder
     {
         $Sliders = array(
             array(
-                "filename" => "Slide1.png" , 
-                "title" =>"" , 
-                "desc" => "" , 
-                "created_at" => now() ,
-                "updated_at" => now() , 
-                ) ,
-            array(
-                "filename" => "Slide2.png" , 
-                "title" =>"" , 
+                "filename" => "Slide1.png" ,
+                "title" =>"" ,
                 "desc" => "" ,
+                "status" => 1 ,
                 "created_at" => now() ,
-                "updated_at" => now() , 
+                "updated_at" => now() ,
                 ) ,
             array(
-                "filename" => "Slide3.png" , 
-                "title" =>"" , 
-                "desc" => "" , 
+                "filename" => "Slide2.png" ,
+                "title" =>"" ,
+                "desc" => "" ,
+                "status" => 1 ,
                 "created_at" => now() ,
-                "updated_at" => now() ,  
+                "updated_at" => now() ,
                 ) ,
-        ) ; 
+            array(
+                "filename" => "Slide3.png" ,
+                "title" =>"" ,
+                "desc" => "" ,
+                "status" => 1 ,
+                "created_at" => now() ,
+                "updated_at" => now() ,
+                ) ,
+        ) ;
 
-        Sliders::insert($Sliders) ; 
+        Sliders::insert($Sliders) ;
     }
 }

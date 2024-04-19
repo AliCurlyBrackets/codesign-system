@@ -38,10 +38,12 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>image</th>
-                                <th>title</th>
-                                <th>desc</th>
-                                <th>Action</th>
+                                <th>{{ __("main.Image") }}</th>
+                                <th>{{ __("main.Title") }}</th>
+                                <th> {{ __("main.Desc") }} </th>
+                                <th> {{ __("main.Status") }} </th>
+                                <th> {{ __("main.Created") }} </th>
+                                <th> {{ __("main.Action") }} </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,13 +52,18 @@
                                 <td> {{$loop->iteration}} </td>
                                 <td> <img src="{{asset("Upload/Slider/$Slider->filename")}}" width="100" alt=""> </td>
                                 <td> {{$Slider->title}} </td>
-                                <td> {{$Slider->desc }} </td>
-                                <td> 
-                                    <button class="btn btn-primary"> <i class="fa-solid fa-pen-to-square"></i> </button>    
-                                    <button class="btn btn-danger"  data-toggle="modal" data-target="#exampleModal"> <i class="fa-solid fa-trash-can"></i> </button>    
+                                <td> {{$Slider->desc}} </td>
+                                <td>
+                                  <span class="badge badge-{{ $Slider->status == 1 ? "success" : "danger" }}"> {{ $Slider->status == 1 ?  __('main.Active')  :  __('main.DesActive') }} </span>
+                                </td>
+                                <td> {{ $Slider->created_at->diffForHumans() }} </td>
+                                <td>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#edit{{ $Slider->id }}"> <i class="fa-solid fa-pen-to-square"></i> </button>
+                                    <button class="btn btn-danger"  data-toggle="modal" data-target="#delete{{ $Slider->id }}"> <i class="fa-solid fa-trash-can"></i> </button>
                                 </td>
                             </tr>
                             @include("Dashboard.Pages.Sliders.delete")
+                            @include("Dashboard.Pages.Sliders.update")
                             @endforeach
                         </tbody>
                         </table>
@@ -66,7 +73,7 @@
                 </div>
                 @include("Dashboard.Pages.Sliders.add")
             </div>
-            
+
         </div>
     </div>
 </div>

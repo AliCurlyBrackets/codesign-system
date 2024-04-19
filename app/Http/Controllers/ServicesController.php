@@ -4,16 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Services;
 use App\Http\Controllers\Controller;
+use App\Repositry\Services\ServicesRepo;
 use Illuminate\Http\Request;
 
 class ServicesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    private $ServicesRepo ;
+
+    public function __construct(ServicesRepo $ServRepo)
+    {
+        $this->ServicesRepo = $ServRepo ;
+    }
     public function index()
     {
-        //
+        return $this->ServicesRepo->index() ;
     }
 
     /**
